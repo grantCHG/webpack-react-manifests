@@ -1,0 +1,28 @@
+{
+  "name": "webpack-react-manifests",
+  "version": "1.0.0",
+  "description": "用webpack编译react后，添加manifests离线缓存的功能",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuanjinliang/webpack-react-manifests.git"
+  },
+  "keywords": [
+	"manifests",
+	"manifest",
+	"webp",
+    "webpack"
+  ],
+  "author": "xuanjinliang",
+  "license": "ISC",
+  "dependencies": {
+    "loader-utils": "^0.2.16"
+  },
+  "bugs": {
+    "url": "https://github.com/xuanjinliang/webpack-react-manifests/issues"
+  },
+  "homepage": "https://github.com/xuanjinliang/webpack-react-manifests#readme"
+}
