@@ -27,11 +27,7 @@ function mkdirsSync(dirpath, mode){
     if (!fs.existsSync(dirpath)) {
         var pathtmp;
         dirpath.split(path.sep).forEach(function(dirname) {
-            if (pathtmp) {
-                pathtmp = path.join(pathtmp, dirname);
-            }else {
-                pathtmp = dirname;
-            }
+            pathtmp = pathtmp ? path.join(pathtmp, dirname) : (dirname?dirname:'/');
             if (!fs.existsSync(pathtmp)) {
                 if (!fs.mkdirSync(pathtmp, mode)) {
                     return false;
