@@ -44,7 +44,9 @@ function urlMatch(dataArray,test){
         let src = v.match(test);
         if(src){
             src = RegExp.$1.replace(/\'|\"/ig,'').trim();
-            array.push(src);
+            if(src.match(/\.(?:js|css)\s*$/)){
+                array.push(src);
+            }
         }
     });
     return array;
@@ -157,6 +159,8 @@ Manifests.prototype.apply = function(compiler) {
             if(scriptArray){
                 cacheAdrray = cacheAdrray.concat(urlMatch(scriptArray,scriptSrc));
             }
+
+            cacheAdrray = Array.from(new Set(cacheAdrray));
 
             writeCacheFile(manifestsPath,manifestsFileName,cacheAdrray);
             htmlPluginData.html = html;

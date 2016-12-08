@@ -1,6 +1,6 @@
 {
   "name": "webpack-react-manifests",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "用webpack编译react后，添加manifests离线缓存的功能",
   "main": "index.js",
   "scripts": {
